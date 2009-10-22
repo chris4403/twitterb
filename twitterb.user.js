@@ -8,7 +8,7 @@
         var v = this.value;
         if(v.match(/http(|s):\/\//) && !v.match(/B!/)) {
             this.value = '[] B! ' + v;
-            this.getSelectionRange(1,1);
+            this.setSelectionRange(1,1);
         }
     });
 })();
