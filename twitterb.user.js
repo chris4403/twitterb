@@ -6,6 +6,9 @@
 (function() {
     unsafeWindow.jQuery('#status').keyup(function(){
         var v = this.value;
-        if(v.match(/http(|s):\/\//) && !v.match(/B!/)) this.value = ' B! ' + v;
+        if(v.match(/http(|s):\/\//) && !v.match(/B!/)) {
+            this.value = '[] B! ' + v;
+            this.getSelectionRange(1,1);
+        }
     });
 })();
